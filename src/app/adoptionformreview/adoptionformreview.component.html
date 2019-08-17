@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="../../assets/css/main.css" />
+
+<div id="main" ng-hide="showForm">
+    <table>
+        <tr ng-repeat="cat in catName">
+            <td>
+                {{ cat.nric  }}   |   {{cat.name}}
+            </td>
+            <td>
+                <button ng-click="reviewForm(cat)">Review</button>
+            </td>
+        </tr>
+    </table>
+</div>
+    <div id="main" ng-hide="!showForm">
+
+            NRIC: <input type="text" name="nric"  ng-model="formObj.nric" disabled>
+            <br />
+            Name: <input type="text" name="name"  ng-model="formObj.name" disabled>
+            <br />
+            Address: <input type="text" name="address"  ng-model="formObj.address" disabled>
+            <br />
+            Email: <input type="email" name="email"  ng-model="formObj.email" disabled>
+            <br />
+            Contact: <input type="tel" name="contact"  ng-model="formObj.contact" disabled>
+            <br />
+           Number of Pets: <input type="number" name="petsnumber"  ng-model="formObj.noOfPets" disabled>
+            <br />
+            <br/>
+            Household Type: <input type="text" name="household"  ng-model="formObj.householdType" disabled>
+            <br />
+            Which cat would you like to adopt? 
+            <select ng-model="formObj.catSelect" disabled>
+                    <option 
+                      value="{{cat.name}}" 
+                      ng-repeat="cat in realCatName">
+                      {{cat.name}}
+                    </option>
+                  </select> 
+            <br/>
+            
+            <input type="button" name="btn_back" value="Back" ng-click="goBack()">
+
+        </div>

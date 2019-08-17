@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="../../assets/css/main.css" />
+
+First Name: <input type="text" name="fname" ng-model="formObj.fName" placeholder="Type your first name here...">
+<!--enter validation-->
+<br />
+Last Name: <input type="text" name="lname" ng-model="formObj.lName" placeholder="Type your last name here...">
+<!--enter validation-->
+<br />
+Email: <input type="text" name="email" ng-model="formObj.email" placeholder="Type your email here...">
+<br />
+Contact: <input type="tel" name="contact" ng-model="formObj.contact" placeholder="Type your contact here...">
+<br />
+Date of Birth: 
+<br/>
+<input type="date" name="dob" ng-model="formObj.dob">
+<br />
+<br />
+Username: <input type="text" name="username" ng-model="formObj.username" placeholder="Type your username here...">
+<br />
+Password: <input type="password" name="password"ng-model="formObj.password" placeholder="Type your password here...">
+<br />
+
+<input type="submit" name="btn_submit" value="Submit" ng-click="register()" >
+
+<input type="reset" name="btn_reset" value="Reset" ng-click="reset()">
+

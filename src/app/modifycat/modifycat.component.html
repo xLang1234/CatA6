@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="../../assets/css/main.css" />
+
+<div id="main" ng-hide="showForm">
+    <table>
+        <tr ng-repeat="cat in catsss">
+            <td>
+                {{cat.name}}
+            </td>
+            <td>
+                <button ng-click="reviewForm(cat)">Review</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- Main -->
+<div id="main" ng-hide="!showForm">
+
+        Cat Name: <input type="text" name="catname" value="Cat 1"  ng-model="formObj.name" placeholder="Type cat name here...">
+        <br />
+        Cat Description: <textarea name="catdesc"  ng-model="formObj.desc" placeholder="Type cat description here...">Blah blah blah descriptions here</textarea>
+        <br />
+        Cat Gender: 
+        <select name="gender">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                </select>
+        <br />
+        Cat Age: <input type="text" name="catage" value="4 months" ng-model="formObj.age" placeholder="Type cat age here...">
+
+        <br />
+        Date of Adoption: 
+        <br/>
+        <input type="date" name="adoptdate" ng-model="formObj.dateOfAdoption">
+        <br />
+        <br/>
+    
+        <input type="submit" name="btn_submit" value="Submit" ng-click="editCatProfile()">
+
+        <br/>
+        
+
+    </div>

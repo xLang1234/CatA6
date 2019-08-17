@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="../../assets/css/main.css" />
+
+NRIC: <input type="text" name="nric" ng-model="formObj.nric" placeholder="Type your NRIC here...">
+<br />
+Name: <input type="text" name="name" ng-model="formObj.name" placeholder="Type your name here...">
+<br />
+Address: <input type="text" name="address" ng-model="formObj.address" placeholder="Type your address here...">
+<br />
+Email: <input type="email" name="email" ng-model="formObj.email" placeholder="Type your email here...">
+<br />
+Contact: <input type="tel" name="contact" ng-model="formObj.contact" placeholder="Type your contact here...">
+<br />
+Number of Pets: <input type="number" name="petsnumber" ng-model="formObj.noOfPets" placeholder="Enter the number of pets you currently have...">
+<br />
+<br/>
+Household Type: <input type="text" name="household" ng-model="formObj.householdType" placeholder="Type your household type here...">
+<br />
+Which cat would you like to adopt? 
+<select ng-model="formObj.catSelect">
+        <option 
+          value="{{cat.name}}" 
+          ng-repeat="cat in catName">
+          {{cat.name}}
+        </option>
+      </select> 
+<br/>
+
+<input type="submit" name="btn_submit" value="Submit" ng-click="sendForm()" >
+
+<input type="reset" name="btn_reset" value="Reset" ng-click="reset()">

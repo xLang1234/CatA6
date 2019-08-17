@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="../../assets/css/main.css" />
+
+<h2>Adopt and Save a life today</h2>
+<a href="#" class="image featured"><img src="../../assets/images/About-CCS.jpg" alt="" /></a>
+<p>Before you rush into adopting a cat, do realise that having a pet is a big responsibility. Adopting a pet means you need to commit to and take care of it for the rest of its life. They cost time and money and will require medical attention when ill or injured.</p>
+<p>It is important that the pet is accepted by the entire household too. Otherwise, the family may end up in conflict and the pet may end up abandoned – as is the case for many of these cats featured here.</p>
+   <footer>
+     <ul class="actions">
+       
+     </ul>
+     
+</footer> 
+ 
+
+<!-- Menu -->
+
+<section><article class="post">
+
+     <div class="card">
+
+
+<div ng-repeat="cat in catName">
+<div class="card-header">
+<img src="../../assets/images/maya.jpg" height="430"/>
+</div>
+<div class="card-content">
+<h3>{{ cat.name }}</h3>
+<h4>{{ cat.desc }}</h4>
+<table id="wobs-table2">
+<tbody>
+<tr>
+<th>Age</th>
+<td>{{ cat.age }}</td>
+</tr>
+<tr>
+<th>Looking for</th>
+<td>Adopt</td>
+</tr>
+<tr>
+<th>Gender</th>
+<td>{{ cat.gender }}</td>
+</tr>
+<tr>
+<th>Date of Adopted</th>
+<td>{{ cat.dateOfAdoption }}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-footer">
+<ul>
+<li>
+<a href="/registration"><i class="fa fa-github"></i><p>Adopt Me!</p></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+   </article>
+     
+     
+</section>
