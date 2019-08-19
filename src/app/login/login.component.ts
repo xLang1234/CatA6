@@ -11,7 +11,6 @@ import * as $ from 'jquery';
 
 
 export class LoginComponent implements OnInit {
-	
   myForm: FormGroup;
   formObj: FormGroup;
 	results: any = false;
@@ -35,17 +34,6 @@ export class LoginComponent implements OnInit {
         this.doAJAX("read" , JSON.stringify(this.formObj.value) , "User", this.callback);
     }
   
-  onSubmit() {
-	  this.authService.authUser(this.myForm.value.name, this.myForm.value.password).subscribe(data => { 
-		this.results = data;
-		if (this.results[0].auth) 
-		{
-			this.authService.setSecureToken(this.myForm.value.name);
-			this.authService.setUserRole(this.results[0].role); 
-			this.router.navigateByUrl('/user');
-		}
-	  });
-  }
 
   serverURL() {
     return "http://localhost:3000/api?"; // here to change DB
@@ -100,17 +88,17 @@ callback = function (arr){
   if(arr.length != 0)
   {
       alert("Successfully login.");
-      localStorage.setItem("username", this.formObj.value.username);
+      localStorage.setItem("username", arr[0].username);
       if(arr[0].userStatus == "user")    
-          window.location.assign("customer.html"); 
+          window.location.assign("customer"); 
       else if (arr[0].userStatus == "admin"){
           //Reroute to admin page
-          window.location.assign("admin.html"); 
+          window.location.assign("admin"); 
           console.log("To admin");
       }
           
       else
-          window.location.assign("customer.html"); 
+          window.location.assign("customer"); 
   }
 }
 
