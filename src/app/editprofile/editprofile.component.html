@@ -1,23 +1,23 @@
 <link rel="stylesheet" href="../../assets/css/main.css" />
 
-First Name: <input type="text" name="fname" ng-model="formObj.fName" placeholder="Type your first name here...">
+First Name: <input type="text" name="fname" [(ngModel)]="formObj.value.fName" placeholder="Type your first name here...">
 <!--enter validation-->
 <br />
-Last Name: <input type="text" name="lname" ng-model="formObj.lName" placeholder="Type your last name here...">
+Last Name: <input type="text" name="lname" [(ngModel)]="formObj.value.lName" placeholder="Type your last name here...">
 <!--enter validation-->
 <br />
-Email: <input type="email" name="email" ng-model="formObj.email" placeholder="Type your email here...">
+Email: <input type="email" name="email" [(ngModel)]="formObj.value.email" placeholder="Type your email here...">
 <br />
-Contact: <input type="tel" name="contact" ng-model="formObj.contact" placeholder="Type your contact here...">
+Contact: <input type="tel" name="contact" [(ngModel)]="formObj.value.contact" placeholder="Type your contact here...">
 <br />
 Date of Birth: 
 <br/>
-<input type="date" name="dob" ng-model="formObj.dob">
+<input type="date" name="dob" [(ngModel)]="formObj.value.dob">
 <br />
 <br />
-Username: <input type="text" name="username" ng-model="formObj.username" disabled="true" placeholder="Type your username here...">
+Username: <input type="text" name="username" [(ngModel)]="formObj.value.username" disabled="true" placeholder="Type your username here...">
 <br />
-Password: <input type="password" name="password" ng-model="formObj.password" placeholder="Type your password here...">
+Password: <input type="password" name="password" [(ngModel)]="formObj.value.password" placeholder="Type your password here...">
 <br />
 
-<input type="submit" name="btn_submit" value="Submit" ng-click="editUserProfile()">
+<input type="submit" name="btn_submit" value="Submit" (click)='editUserProfile()' ng-click="editUserProfile()">
