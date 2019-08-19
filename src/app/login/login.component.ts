@@ -11,17 +11,11 @@ import * as $ from 'jquery';
 
 
 export class LoginComponent implements OnInit {
-  myForm: FormGroup;
   formObj: FormGroup;
-	results: any = false;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router ) { }
 
   ngOnInit() {
-	  this.myForm = this.fb.group ({
-		  name: '',
-		  password: ''
-    });
     
     this.formObj = this.fb.group ({
 		  username: '',
@@ -102,45 +96,6 @@ callback = function (arr){
   }
 }
 
-
- 
-  
-  // $scope.formObj = {};
-  //   $scope.login = function () {
-  //       console.log("TCL: formObj", $scope.formObj);
-  //       doAJAX("read" , JSON.stringify($scope.formObj) , "User", callback);
-  //   }
-	
-	
-
-  //   $scope.reset = function (){
-  //       $scope.formObj = {};
-  //   }
-    
-
-  //   var callback = function (arr){
-  //       console.log("Results returned : " , arr);
-  //       if(arr.length != 0)
-  //       {
-  //           alert("Successfully login.");
-  //           localStorage.setItem("username", $scope.formObj.username);
-  //           if(arr[0].userStatus == "user")    
-  //               window.location.assign("customer.html"); 
-  //           else if (arr[0].userStatus == "admin"){
-  //               //Reroute to admin page
-  //               window.location.assign("admin.html"); 
-  //               console.log("To admin");
-  //           }
-                
-  //           else
-  //               window.location.assign("customer.html"); 
-  //       }
-  //   }
-
-  //   $scope.signUp =  function (formList) {
-
-        
-  //   }
   
 
 }
