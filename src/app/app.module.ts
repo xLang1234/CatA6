@@ -21,11 +21,11 @@ import { ModifycatComponent } from './modifycat/modifycat.component';
 import { NewcatComponent } from './newcat/newcat.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RulesComponent } from './rules/rules.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
     LoginComponent,
     AdminComponent,
     IndexComponent,
@@ -44,8 +44,9 @@ import { RulesComponent } from './rules/rules.component';
   imports: [
     BrowserModule,
 	routing,
-	ReactiveFormsModule,
-	HttpClientModule
+  ReactiveFormsModule,
+  HttpClientModule,
+  FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

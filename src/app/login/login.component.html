@@ -1,10 +1,14 @@
-<link rel="stylesheet" href="../../assets/css/main.css" />
 
-Username: <input type="text" name="login_username" ng-model="formObj.username" placeholder="Type your username here...">
-Password: <input type="password" name="login_password" ng-model="formObj.password" placeholder="Type your password here...">
+
+<link rel="stylesheet" href="../../assets/css/main.css" />
+<div ng-app="myApp" ng-controller="catCtrl" class="container">
+Username: <input type="text" ng-controller="catCtrl" name="login_username" ng-model="formObj.username" [ngModel]="formObj.username" [ngModelOptions]="{standalone: true}" placeholder="Type your username here...">
+Password: <input type="password" name="login_password" ng-model="formObj.password" [ngModel]="formObj.password" [ngModelOptions]="{standalone: true}" placeholder="Type your password here...">
 <br/>
 <p>No Account? <a href="/registration">Register Here!</a></p>
 
-<input type="button" name="btn_login" value="Login" ng-click="login()" > 
+<input type="button" name="btn_login" value="Login" ng-click="login1()" (click)="login()" > 
 
 <input type="reset" name="btn_reset" value="Reset" ng-click="reset()"> 
+</div>
+

@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Yu Zhen\angular-apps\authApp\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! D:\New folder\CatA6-master (2)\CatA6-master (1)\CatA6-master\src\styles.css */"./src/styles.css");
 
 
 /***/ })

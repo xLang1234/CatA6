@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
 	
-	myForm: FormGroup;
+  myForm: FormGroup;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 

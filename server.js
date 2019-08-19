@@ -1,3 +1,4 @@
+var cors = require('cors')
 // FileName: index.js
 // Import express
 const bodyParser = require('body-parser');
@@ -14,6 +15,7 @@ app.disable('etag');
 // Add the code below to index.js
 // Import routes
 // Use Api routes in the App
+app.use(cors());
 app.use('/api', apiRoutes)
 
 // Parsers for POST data
