@@ -1,30 +1,30 @@
 <link rel="stylesheet" href="../../assets/css/main.css" />
 
-NRIC: <input type="text" name="nric" ng-model="formObj.nric" placeholder="Type your NRIC here...">
+NRIC: <input type="text" name="nric" [(ngModel)]="formObj.value.nric" placeholder="Type your NRIC here...">
 <br />
-Name: <input type="text" name="name" ng-model="formObj.name" placeholder="Type your name here...">
+Name: <input type="text" name="name" [(ngModel)]="formObj.value.name" placeholder="Type your name here...">
 <br />
-Address: <input type="text" name="address" ng-model="formObj.address" placeholder="Type your address here...">
+Address: <input type="text" name="address" [(ngModel)]="formObj.value.address" placeholder="Type your address here...">
 <br />
-Email: <input type="email" name="email" ng-model="formObj.email" placeholder="Type your email here...">
+Email: <input type="email" name="email" [(ngModel)]="formObj.value.email" placeholder="Type your email here...">
 <br />
-Contact: <input type="tel" name="contact" ng-model="formObj.contact" placeholder="Type your contact here...">
+Contact: <input type="tel" name="contact" [(ngModel)]="formObj.value.contact" placeholder="Type your contact here...">
 <br />
-Number of Pets: <input type="number" name="petsnumber" ng-model="formObj.noOfPets" placeholder="Enter the number of pets you currently have...">
+Number of Pets: <input type="number" name="petsnumber" [(ngModel)]="formObj.value.noOfPets" placeholder="Enter the number of pets you currently have...">
 <br />
 <br/>
-Household Type: <input type="text" name="household" ng-model="formObj.householdType" placeholder="Type your household type here...">
+Household Type: <input type="text" name="household" [(ngModel)]="formObj.value.householdType" placeholder="Type your household type here...">
 <br />
 Which cat would you like to adopt? 
-<select ng-model="formObj.catSelect">
+<select [(ngModel)]="formObj.value.catSelect">
         <option 
           value="{{cat.name}}" 
-          ng-repeat="cat in catName">
+          *ngFor="let cat of catName">
           {{cat.name}}
         </option>
       </select> 
 <br/>
 
-<input type="submit" name="btn_submit" value="Submit" ng-click="sendForm()" >
+<input type="submit" name="btn_submit" value="Submit" (click)="sendForm()" ng-click="sendForm()" >
 
-<input type="reset" name="btn_reset" value="Reset" ng-click="reset()">
+<input type="reset" name="btn_reset" value="Reset" (click)="reset()" ng-click="reset()">
