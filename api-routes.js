@@ -31,7 +31,7 @@ router.post('/', function (req, res) {
     HandleRequests(req , res);
 })
 router.get('/', function (req, res) {
-    console.log("Request : " , req)
+    // console.log("Request : " , req)
     // console.log("res : " , res);
     HandleRequests(req , res);
 });
@@ -292,7 +292,8 @@ const insertDocuments = function(callback , query , entity) {
     // Get the Contact collection
     const collection = db.collection(entity);
     // Delete document where a is 3
-    collection.deleteMany( query , function(err, result) {
+    q = { "name" : JSON.parse(query).name }
+    collection.deleteMany( q , function(err, result) {
       assert.equal(err, null);
       assert.equal(1, result.result.n);
       console.log("Removed the document");

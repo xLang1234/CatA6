@@ -32,8 +32,11 @@
         <input type="date" name="adoptdate" [(ngModel)]="formObj.value.dateOfAdoption">
         <br />
         <br/>
-    
-        <input type="submit" name="btn_submit" value="Submit" (click)="editCatProfile()" ng-click="editCatProfile()">
+		<div>
+			<span><input type="submit" name="btn_submit" value="Submit" (click)="editCatProfile()" ng-click="editCatProfile()"></span>
+			<span><input type="submit" name="btn_delete" value="delete" (click)="deleteCatProfile()" ng-click="deleteCatProfile()"></span>
+		</div>
+        
 
         <br/>
         

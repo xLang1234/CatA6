@@ -57,10 +57,23 @@ export class ModifycatComponent implements OnInit {
         
     }
 
+    deleteCatProfile = function(){
+        delete this.formObj.value["$$hashKey"];
+        this.doAJAX("delete" , JSON.stringify(this.formObj.value ) , "Cat", this.callbackDelete , this);
+        this.init();
+    }
+
     callbackUpdate = function (arr , dis){
 
         dis.showForm = false;
         alert("Successfully updated.");
+        // window.location.assign("customer.html");
+    }
+
+    callbackDelete = function (arr , dis){
+
+        dis.showForm = false;
+        alert("Successfully deleted.");
         // window.location.assign("customer.html");
     }
 
